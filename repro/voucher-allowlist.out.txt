@@ -1,0 +1,38 @@
+creditFloor 1000000000000000000000n
+equity 1000000000000000000000n
+ZRO {
+  isVoucherMarketAllowed: true,
+  placeable: true,
+  limitedBy: 'collateral',
+  maxQuantity: 2820700000000000000000n
+} eth_call placeOrder (min size, resting bid 20% under mark): SUCCESS
+LIT {
+  isVoucherMarketAllowed: true,
+  placeable: true,
+  limitedBy: 'collateral',
+  maxQuantity: 1416000000000000000000n
+} eth_call placeOrder (min size, resting bid 20% under mark): SUCCESS
+VVV {
+  isVoucherMarketAllowed: true,
+  placeable: true,
+  limitedBy: 'collateral',
+  maxQuantity: 194700000000000000000n
+} eth_call placeOrder (min size, resting bid 20% under mark): SUCCESS
+1000PEPE {
+  isVoucherMarketAllowed: true,
+  placeable: true,
+  limitedBy: 'collateral',
+  maxQuantity: 1108900000000000000000000n
+} eth_call placeOrder (min size, resting bid 20% under mark): SUCCESS
+PUMP {
+  isVoucherMarketAllowed: true,
+  placeable: true,
+  limitedBy: 'collateral',
+  maxQuantity: 1088400000000n
+} eth_call placeOrder (min size, resting bid 20% under mark): SUCCESS
+ZEC {
+  isVoucherMarketAllowed: true,
+  placeable: true,
+  limitedBy: 'collateral',
+  maxQuantity: 411000000n
+} eth_call placeOrder (min size, resting bid 20% under mark): SUCCESS
