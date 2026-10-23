@@ -1,11 +1,11 @@
 # The "Open interest cap" column in the perps market table is stale for 20 of 21 markets
 
-**Severity:** normal
-**Area:** docs
+Severity: normal
+Area: docs
 
 ## Steps to reproduce
-1. Run `repro/t4.mjs`. It calls `client.getPerpRiskParams(pool)` for every row of `client.listPerpMarkets()` and formats `maxOpenInterest` with `baseDecimals`.
-2. Compare the output with the "Open interest cap" column in `trading/perps-testnet/README.md#markets`. The note under that table says: "These figures are read from the live markets".
+1. `cd repro && npm i && node t4.mjs`. It calls `client.getPerpRiskParams(pool)` for every row of `client.listPerpMarkets()` and formats `maxOpenInterest` with `baseDecimals`.
+2. Compare the `oi` column with the "Open interest cap" column in `trading/perps-testnet/README.md#markets`. The note under that table says: "These figures are read from the live markets".
 
 ## Expected
 The live caps match the table, or the table says when it was last read.
@@ -40,10 +40,10 @@ Only TAO matches. Every other cap on chain is 2× or 4× the documented figure:
 The other columns are correct for all 21 markets: max leverage, IM/MM, tick, min size, and base decimals.
 
 ## Evidence
-`repro/t4.mjs` prints a `console.table` of `maxOpenInterest`, `maxPositionSize`, IM/MM/close-out bps, tick and min size for each market.
+- Script: [`repro/t4.mjs`](../repro/t4.mjs); output: [`repro/t4.out.txt`](../repro/t4.out.txt) (`console.table` of `maxOpenInterest` as `oi`, `maxPositionSize`, IM/MM/close-out bps, tick and min size per market)
 
 ## Environment
 - SDK: `@somnia-chain/markets-sdk@0.32.1` (the version the docs pin), `viem@2.57.10`, Node 20.19.2, Linux
 - Network: Somnia Hideki / "Tokyo" perps testnet, chain id 50383, RPC `https://api.hideki2.infra.testnet.somnia.network`, indexer `https://hideki-dev.smk.somnia.host/v1/graphql`
-- Wallet: none. Every check is a read or an `eth_call` simulation, with nothing signed or sent
+- Wallet: none. Every check is a read or an `eth_call` simulation; nothing was signed or sent
 - Observed: 2026-10-23 ~05:40–05:50 UTC (around block 30,823,131)

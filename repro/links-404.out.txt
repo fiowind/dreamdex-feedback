@@ -1,0 +1,2 @@
+https://github.com/somnia-chain/somnia-skills -> 404
+https://api.github.com/repos/somnia-chain/somnia-skills -> 404

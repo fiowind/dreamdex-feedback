@@ -1,0 +1,7 @@
+baseSymbol values: ["ZRO","LIT","VVV","1000PEPE","PUMP","ZEC","TAO","WLD","NEAR","XLM","AVAX","LINK","SUI","ADA","BNB","DOGE","XRP","HYPE","SOL","ETH","BTC"]
+find(baseSymbol === "WBTC"): undefined
+find(baseSymbol === "BTC") pool: 0x4181dd08e73bbcdd1ba3e615a18f6abd941b94c0
+113:    /** Wrapper token standing in for the synthetic base (e.g. WBTC). */
+117:    /** Synthetic-base symbol (e.g. "WBTC"); null when the wrapper exposes none. */
+928:    /** Base token symbol, e.g. `"SOMI"` | `"WBTC"`. */
+974:    /** Synthetic-base token symbol, e.g. `"WBTC"`. */
